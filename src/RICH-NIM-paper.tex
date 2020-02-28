@@ -18,7 +18,8 @@
 
 \usepackage{epstopdf}
 \usepackage{subcaption}
-
+ \usepackage{url}
+ 
 \hyphenpenalty=1500
 \exhyphenpenalty=1500
 \journal{Nuclear Instruments and Methods in Physics Research A}
@@ -57,7 +58,7 @@ Photon detection efficiency
 
 \section{Introduction}
 
-As part of the ongoing study of the structure of nucleons in Hall B at the Thomas Jefferson National Accelerator Facility (JLab) \cite{Avakian:2012ca}, the CEBAF Large Acceptance Spectrometer (CLAS12) aims to accurately identify the secondary particles of high energy reactions, assist in probing the strangeness frontier, and aid in characterizing transverse momentum distribution (TMD) and generalized parton distribution (GPD) functions. Indispensable to this task is the ability to identify kaons, pions, and protons.  With the CLAS12 spectrometer providing accurate momentum measurements the RICH detector \cite{Contalbrigo:2020,Contalbrigo:2020snw,Mirazita:2017vav,Contalbrigo:2014rqa} provides tandem Cherenkov lightcone radius measurements which yield the velocities of near light-speed particles, thus facilitating mass-dependent particle identification.
+As part of the ongoing study of the structure of nucleons in Hall B at the Thomas Jefferson National Accelerator Facility (JLab)  the CEBAF Large Acceptance Spectrometer (CLAS12) \cite{Burkert:2020akg} aims to accurately identify the secondary particles of high energy reactions, assist in probing the strangeness frontier, and aid in characterizing transverse momentum distribution (TMD) and generalized parton distribution (GPD) functions. Indispensable to this task is the ability to identify kaons, pions, and protons.  With the CLAS12 spectrometer providing accurate momentum measurements the RICH detector \cite{Contalbrigo:2020,Contalbrigo:2020snw,Mirazita:2017vav,Contalbrigo:2014rqa} provides tandem Cherenkov lightcone radius measurements which yield the velocities of near light-speed particles, thus facilitating mass-dependent particle identification.
 
 \begin{figure}[hbt]
 	\centering
@@ -78,7 +79,7 @@ Furthermore, the device has a very high packing fraction of 89\% with a high qua
 The tubes also have excellent immunity to magnetic fields, because all internal parts are housed in a metal package and the distance between dynode electrodes are very short.
 
 
-Initially, the Hamamatsu H8500 MAPMT model was chosen as the best option because they provide high quantum efficiency for visible light and sufficient spatial resolution (6x6 mm$^2$) at a limited cost.  However, recently Hamamatsu has released the new H12700 MAPMT model which shows enhanced single photoelectron (SPE) detection and is otherwise similar to the H8500 MAPMTs in spatial resolution, cost, and the rest.  Consequently we desire to better characterize the new H12700 MAPMTs and choose the best model between these two options for inclusion in the CLAS12 RICH.
+Initially, the Hamamatsu H8500 MAPMT model \cite{H8500} was chosen as the best option because they provide high quantum efficiency for visible light and sufficient spatial resolution (6x6 mm$^2$) at a limited cost.  However, recently Hamamatsu has released the new H12700 MAPMT model which shows enhanced single photoelectron (SPE) detection and is otherwise similar to the H8500 MAPMTs in spatial resolution, cost, and the rest.  Consequently we desire to better characterize the new H12700 MAPMTs \cite{H12700} and choose the best model between these two options for inclusion in the CLAS12 RICH.
 
 These features pose challenging problem for the MAPMT testing and calibration.
 RICH consists of 400 MAPMTs resulting in total number of channels equal to 25600. So in order to test them efficiently within a reasonable timeframe the fully automated test stand was build to evaluate 2 MAPMTs at once, with potential extension to 6 MAPMTs, as shown on Fig.~\ref{fig:MAPMTtest}.
@@ -271,7 +272,7 @@ We saw that although there is little difference in crosstalk signals, the H12700
 We see that the relative efficiency is closely related to the $\mu$ which is on average, over all pixels at all voltages for all the PMTs we tested, $29\pm5$ percent higher in H12700 than H8500 MAPMTs. One concern with these $\mu$ measurements however is that the laser system used to measure these PMTs was only incident on a portion of each pixel, consequently missing their sum total effect and pinpointing possible spatial dependencies which should be further studied and perhaps remeasured with a fully illuminated MAPMT instead of collimated pinpoint laser light. In terms of crosstalk for the two varieties of MAPMT the H12700s appear to be better than the H8500s. The H12700s have a decrease in crosstalk by nearly a factor of two. Additional studies of dark current in the H12700s would be useful, as the dark current is usually dominated by individual pixels or bad regions of the PMT instead of spread around evenly like in the H8500s, but overall the two varieties are not very different in terms of dark current.
 
 \bibliographystyle{elsarticle-num-names}
-\bibliography{bib_vpk}
+\bibliography{RICH}
 
 
 \end{document}
