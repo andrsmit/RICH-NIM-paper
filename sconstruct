@@ -1,11 +1,7 @@
 import os
 
-env = Environment(NT22RUN = os.environ['NT22RUN'])
-bldink = Builder(action = 'inkscape "$SOURCE" -A "$TARGET" && pdftops "$TARGET" "$TARGET".ps && epstopdf "$TARGET".ps --outfile "$TARGET".pdf && rm -f "$TARGET".ps && if [[ `stat -c%s "$TARGET".pdf` -lt `stat -c%s "$TARGET"` ]];then mv "$TARGET".pdf "$TARGET";else rm -f "$TARGET".pdf;fi', suffix = '.pdf', src_suffix = '.svg')
-bldpdftk = Builder(action = 'pdftk $SOURCES cat output "$TARGET"', suffix = '.pdf')
-env.Append(BUILDERS = {'INK' : bldink})
-env.Append(BUILDERS = {'Pdftk' : bldpdftk})
+env = Environment()
 
 Export('env')
 
-env.SConscript('sconscript', variant_dir='$NT22RUN/work/tmp/tex/'+os.path.basename(os.getcwd()), duplicate=0)
+env.SConscript('sconscript', variant_dir='build', duplicate=0)

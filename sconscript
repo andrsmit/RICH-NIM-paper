@@ -2,9 +2,9 @@ Import('env')
 
 listname = []
 
-for texfile in Glob('src/*.tex'):
+for texfile in ['RICH-NIM-paper.tex']:
   pdfnode = env.PDF(texfile)
-  env.Install('#',pdfnode)
-  env.Alias('install', '#')
+  env.Install('..',pdfnode)
+  env.Alias('install', '..')
 
 Default('install')
