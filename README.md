@@ -4,6 +4,11 @@
 ```
 git clone git@github.com:drewkenjo/RICH-NIM-paper.git
 ```
+or
+```
+git clone https://github.com/drewkenjo/RICH-NIM-paper.git
+```
+
 2. ```cd``` into working directory
 ```
 cd RICH-NIM-paper
